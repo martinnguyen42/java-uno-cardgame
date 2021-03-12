@@ -1,7 +1,14 @@
 # Projet de groupe 10 - Programmation Java - 18VP
+# UNO - Jeu de Cartes 
+
+## Le collaborateur
+**NGUYEN** Duc Phu - 18126028
+**NGUYEN** Hoang Long - 18126005
 
 ## Instructions
+
 **Exécuter l'application**
+
 Exécutez la méthode `main` dans la classe UnoApp
 
 ## Domaine principal 
