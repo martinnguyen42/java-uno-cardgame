@@ -1,8 +1,9 @@
 # Projet de groupe 10 - Programmation Java - 18VP
 # UNO - Jeu de Cartes 
 
-## Le collaborateur
+## Le collaborateur [GROUPE 10]
 **NGUYEN** Duc Phu - 18126028
+
 **NGUYEN** Hoang Long - 18126005
 
 ## Instructions
@@ -12,7 +13,7 @@
 Exécutez la méthode `main` dans la classe UnoApp
 
 ## Domaine principal 
-La logique de base du jeu est construite selon les [règles officielles de l'uno] (https://en.wikipedia.org/wiki/Uno_ (card_game) #Official_rules). 
+La logique de base du jeu est construite selon les [règles officielles de l'uno] (https://en.wikipedia.org/wiki/Uno_(card_game)#Official_rules). 
 
 ### Cartes Uno
 Les cartes sont des objets de valeur, c'est-à-dire immuables. Les types de cartes suivants sont disponibles dans Uno: 
