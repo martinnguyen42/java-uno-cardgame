@@ -27,7 +27,8 @@ public class CardDeck {
 	// Create card for the game
 	private void createCards() {
 		createNumberCards();
-		// TODO: Another UNO cards
+		createActionCards();
+		createWildCards();
 	}
 
 	/*
@@ -48,7 +49,31 @@ public class CardDeck {
 		}
 	}
 	
-
-	// TODO: Create action cards
+	/*
+	 * There are two of each action card in each color, 
+	 * they are: Draw 2 (the next player must draw 2 cards and miss their turn), 
+	 * Reverse (reverses the direction of play) 
+	 * and Skip (the next player is "skipped" ~ lose their turn).
+	 */
+	private void createActionCards() {
+		for (var color: CardColor.values()) {
+			for (var i = 0; i < 2; ++i) {
+				cards.add(new SkipCard(color));
+				cards.add(new ReverseCard(color));
+				cards.add(new DrawTwoCard(color));
+			}
+		}
+	}
 	
+	/*
+	 * Wild Cards include Wild (change color) and Wild Draw 4 (change color and the next player must draw 4 cards). 
+	 * Players can play them any time and change the color that continues play. 
+	 * There are 4 of each kind of Wild Cards.
+	 */
+	private void createWildCards() {
+		for (var i = 0; i < 4; ++i ) {
+			cards.add(new WildColorCard());
+			cards.add(new WildDrawFourCard());
+		}
+	}
 }
