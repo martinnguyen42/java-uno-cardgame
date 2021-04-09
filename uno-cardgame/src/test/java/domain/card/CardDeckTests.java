@@ -19,7 +19,7 @@ public class CardDeckTests {
 
 	@Test
 	public void WhenInitialized_ShouldBeImmutable() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 
 		Assertions.assertThrows(UnsupportedOperationException.class, () -> cards.remove(0));
 	}
@@ -31,7 +31,7 @@ public class CardDeckTests {
 	 */
 	@Test
 	public void UnoCardsDeckFullyTest() {
-		assertEquals(108, cardDeck.getCards().size());
+		assertEquals(108, cardDeck.getImmutableCards().size());
 	}
 
 	/*
@@ -40,7 +40,7 @@ public class CardDeckTests {
 	 */
 	@Test
 	public void UnoNumberCardsTest() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 
 		/*
 		 * four 0 cards eight card for each number[1-9] cards
@@ -69,7 +69,7 @@ public class CardDeckTests {
 	// When initialized, Card deck should have 8 Reverse cards
 	@Test
 	public void UnoSkipCardsTest() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 		var colorCounts = new int[4];
 
 		for (var card : cards) {
@@ -88,7 +88,7 @@ public class CardDeckTests {
 	// When initialized, Card deck should have 8 Reverse cards
 	@Test
 	public void UnoReverseCardsTest() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 		var colorCounts = new int[4];
 
 		var expectedColorCounts = new int[4];
@@ -113,7 +113,7 @@ public class CardDeckTests {
 	// When initialized, Card deck should have 8 Draw Two cards
 	@Test
 	public void UnoDrawTwoCardsTest() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 		var colorCounts = new int[4];
 
 		var expectedColorCounts = new int[4];
@@ -137,7 +137,7 @@ public class CardDeckTests {
 	// When initialized, Card deck should have 8 Wild cards
 	@Test
 	public void UnoWildCardsTest() {
-		var cards = cardDeck.getCards();
+		var cards = cardDeck.getImmutableCards();
 		
 		var wildColorCardCount = 0;
 		var wildDrawCardCount = 0;

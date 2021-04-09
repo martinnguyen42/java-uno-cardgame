@@ -19,8 +19,11 @@ public class CardDeck {
 		createCards();
 	}
 
-	// Note: unmodifiableList using for access to new value cards in Collections object 
-	public List<Card> getCards() {
+	/*
+	 * Returns an unmodifiable view of the Cards list
+	 * This method allows modules to provide users with "read-only" access to internal Cards list 
+	 */
+	public List<Card> getImmutableCards() {
 		return Collections.unmodifiableList(cards);
 	}
 	
